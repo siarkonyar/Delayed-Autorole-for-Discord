@@ -18,7 +18,10 @@ client.on('ready', () => {
 client.on('guildMemberAdd', member => {
     console.log('User @' + member.user.tag + ' has joined the server!');
     var role = member.guild.roles.cache.find(role => role.name == "aptal");
-    member.roles.add(role);
+    function roleAdd(role) {
+        member.roles.add(role);
+    }
+    setTimeout(role, 900000, role);
 });
 
 client.login(process.env.DJS_TOKEN);
