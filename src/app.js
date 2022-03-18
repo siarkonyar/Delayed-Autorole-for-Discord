@@ -21,7 +21,7 @@ client.on('guildMemberAdd', member => {
     function roleAdd(role) {
         member.roles.add(role);
     }
-    setTimeout(roleAdd, 300000, role);
+    roleAdd(role);
 });
 
 client.login(process.env.DJS_TOKEN);
