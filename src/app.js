@@ -1,5 +1,4 @@
 const { Client,  Intents } = require("discord.js");
-const config = require("../config.json");
 
 const client = new Client({
     intents: ["DIRECT_MESSAGES", "GUILDS", "GUILD_MEMBERS"],
@@ -18,8 +17,8 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', member => {
     console.log('User @' + member.user.tag + ' has joined the server!');
-    var role = member.guild.roles.cache.find(role => role.name == config.role);
+    var role = member.guild.roles.cache.find(role => role.name == "aptal");
     member.roles.add(role);
 });
 
-client.login(config.BOT_TOKEN);
+client.login(process.env.DJS_TOKEN);
