@@ -1,0 +1,23 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.cjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siarkonyar/Discord-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siarkonyar/Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/siarkonyar/Discord-Bot#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}
