@@ -17,7 +17,7 @@ client.on('ready', () => {
 
 
 client.on('guildMemberAdd', member => {
-    return member.roles.add(member.guild.roles.cache.get(process.env.SERVER_ROLE_ID));
+    member.roles.add(member.guild.roles.cache.get(process.env.SERVER_ROLE_ID));
 });
 
 client.login(process.env.DJS_TOKEN);
