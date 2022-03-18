@@ -18,10 +18,7 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', member => {
     var role = member.guild.roles.cache.find(role => role.name == "aptal");
-    function roleAdd(role) {
-        member.roles.add(role);
-    }
-    roleAdd(role);
+    return member.roles.add(role);
 });
 
 client.login(process.env.DJS_TOKEN);
