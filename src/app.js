@@ -15,13 +15,13 @@ client.on('ready', () => {
     console.log(`Launched as a bot: ${client.user.tag}!`);
 });
 
+
 client.on('guildMemberAdd', member => {
-    console.log('User @' + member.user.tag + ' has joined the server!');
     var role = member.guild.roles.cache.find(role => role.name == "aptal");
     function roleAdd(role) {
         member.roles.add(role);
     }
-    setTimeout(role, 300000, role);
+    setTimeout(roleAdd, 300000, role);
 });
 
 client.login(process.env.DJS_TOKEN);
