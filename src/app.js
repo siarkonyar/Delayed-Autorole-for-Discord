@@ -33,7 +33,7 @@ function setTimeout_ (fn, delay) {
 client.on('guildMemberAdd', member => {
     setTimeout_(function() {
         member.roles.add(member.guild.roles.cache.get(process.env.SERVER_ROLE_ID));
-    }, 300000)
+    }, 1000*60*60*24*15);
 });
 
 client.login(process.env.DJS_TOKEN);
